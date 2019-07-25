@@ -20,8 +20,8 @@
 			"sources" : [
 				{
 					"type" : "git",
-					"tag" : "0.2",
-					"commit" : "b8bc28840f0e3fe3f2485a9732553ad19d1283df",
+					"tag" : "0.4.1",
+					"commit" : "66d7bf6076ea86a4355dc8f00294be65cc0a0b1d",
 					"url" : "https://github.com/maoschanz/drawing"
 				}
 			]
