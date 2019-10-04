@@ -8,7 +8,7 @@
 		"--share=ipc",
 		"--socket=x11",
 		"--socket=wayland",
-        	"--metadata=X-DConf=migrate-path=/com/github/maoschanz/drawing/"
+		"--metadata=X-DConf=migrate-path=/com/github/maoschanz/drawing/"
 	],
 	"modules" : [
 		{
@@ -17,8 +17,8 @@
 			"sources" : [
 				{
 					"type" : "git",
-					"tag" : "0.4.4",
-					"commit" : "663d61859685c10e09fa1318ea6a41d78bf7abe4",
+					"tag" : "0.4.5",
+					"commit" : "f54eee159f2c22aa60e41b02c0a696e5f25c2a68",
 					"url" : "https://github.com/maoschanz/drawing"
 				}
 			]
