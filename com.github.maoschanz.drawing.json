@@ -10,18 +10,14 @@
 		"--socket=wayland",
 		"--metadata=X-DConf=migrate-path=/com/github/maoschanz/drawing/"
 	],
-	"modules" : [
-		{
-			"name" : "drawing",
-			"buildsystem" : "meson",
-			"sources" : [
-				{
-					"type" : "git",
-					"tag" : "0.4.6",
-					"commit" : "ec7800b691f8d6f0c38bfb29421bbcbd07778c1a",
-					"url" : "https://github.com/maoschanz/drawing"
-				}
-			]
-		}
-	]
+	"modules" : [{
+		"name" : "drawing",
+		"buildsystem" : "meson",
+		"sources" : [{
+			"type" : "git",
+			"tag" : "0.4.8",
+			"commit" : "db3164e2c4379726b379bc2fab0dba676542cb01",
+			"url" : "https://github.com/maoschanz/drawing"
+		}]
+	}]
 }
