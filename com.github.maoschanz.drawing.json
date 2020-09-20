@@ -1,7 +1,7 @@
 {
 	"app-id" : "com.github.maoschanz.drawing",
 	"runtime" : "org.gnome.Platform",
-	"runtime-version" : "3.36",
+	"runtime-version" : "3.38",
 	"sdk" : "org.gnome.Sdk",
 	"command" : "drawing",
 	"finish-args" : [
@@ -15,9 +15,10 @@
 		"buildsystem" : "meson",
 		"sources" : [{
 			"type" : "git",
-			"tag" : "0.4.14",
-			"commit" : "ad6f76c99ac599c16641c419c854567ee6e0664b",
+			"tag" : "0.6.0",
+			"commit" : "06cd65293eecc202f9f376fad63109d9956b058b",
 			"url" : "https://github.com/maoschanz/drawing"
 		}]
 	}]
 }
+
