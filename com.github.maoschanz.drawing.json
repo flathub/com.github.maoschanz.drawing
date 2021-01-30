@@ -15,8 +15,8 @@
 		"buildsystem" : "meson",
 		"sources" : [{
 			"type" : "git",
-			"tag" : "0.6.4",
-			"commit" : "69815aa2854d78fc65879c838b1721193b17b491",
+			"tag" : "0.6.5",
+			"commit" : "bd62d4a180e87f04d2a3380c709b88ddef86266b",
 			"url" : "https://github.com/maoschanz/drawing"
 		}]
 	}]
