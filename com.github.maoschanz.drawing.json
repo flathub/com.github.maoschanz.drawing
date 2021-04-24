@@ -1,12 +1,12 @@
 {
 	"app-id" : "com.github.maoschanz.drawing",
 	"runtime" : "org.gnome.Platform",
-	"runtime-version" : "3.38",
+	"runtime-version" : "40",
 	"sdk" : "org.gnome.Sdk",
 	"command" : "drawing",
 	"finish-args" : [
 		"--share=ipc",
-		"--socket=x11",
+		"--socket=fallback-x11",
 		"--socket=wayland",
 		"--metadata=X-DConf=migrate-path=/com/github/maoschanz/drawing/"
 	],
@@ -15,8 +15,8 @@
 		"buildsystem" : "meson",
 		"sources" : [{
 			"type" : "git",
-			"tag" : "0.6.5",
-			"commit" : "bd62d4a180e87f04d2a3380c709b88ddef86266b",
+			"tag" : "0.8.0",
+			"commit" : "1af461c2701ac90366413c45bfc63ebcee93dcab",
 			"url" : "https://github.com/maoschanz/drawing"
 		}]
 	}]
