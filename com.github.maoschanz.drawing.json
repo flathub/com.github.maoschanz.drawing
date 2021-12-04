@@ -17,8 +17,8 @@
 			"sources": [
 				{
 					"type": "git",
-					"tag": "0.8.4",
-					"commit": "65ba9d7afc32ec848cee2857e4398347e24fb767",
+					"tag": "0.8.5",
+					"commit": "fd58da7395d52420a233cf1c547c32daa8f1d700",
 					"url": "https://github.com/maoschanz/drawing",
 					"x-checker-data": {
 						"type": "git",
