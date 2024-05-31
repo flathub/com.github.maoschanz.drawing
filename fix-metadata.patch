@@ -1,0 +1,21 @@
+diff --git a/data/com.github.maoschanz.drawing.appdata.xml.in b/data/com.github.maoschanz.drawing.appdata.xml.in
+index f9cf7e91..54f789a7 100644
+--- a/data/com.github.maoschanz.drawing.appdata.xml.in
++++ b/data/com.github.maoschanz.drawing.appdata.xml.in
+@@ -9,11 +9,12 @@
+     <kudo>ModernToolkit</kudo>
+     <kudo>UserDocs</kudo>
+   </kudos>
+-  <custom>
+-    <value key="Purism::form_factor">workstation</value>
+-    <value key="Purism::form_factor">mobile</value>
+-  </custom>
+   <content_rating type="oars-1.1" />
++  <supports>
++    <control>pointing</control>
++    <control>keyboard</control>
++    <control>touch</control>
++  </supports>
+ 
+   <name>Drawing</name>
+   <!-- IMPORTANT: the summarized description of the application. -->
