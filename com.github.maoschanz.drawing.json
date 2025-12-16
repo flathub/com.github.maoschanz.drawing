@@ -1,118 +1,118 @@
 {
-	"app-id": "com.github.maoschanz.drawing",
-	"runtime": "org.gnome.Platform",
-	"runtime-version": "49",
-	"sdk": "org.gnome.Sdk",
-	"command": "drawing",
-	"sdk-extensions": [
-		"org.freedesktop.Sdk.Extension.rust-stable"
-	],
-	"finish-args": [
-		"--share=ipc",
-		"--socket=fallback-x11",
-		"--socket=wayland",
-		"--metadata=X-DConf=migrate-path=/com/github/maoschanz/drawing/"
-	],
-	"cleanup": [
-		"/bin/gdk-pixbuf-*",
-		"/include",
-		"/share/doc",
-		"/share/man",
-		"/share/thumbnailers",
-		"/lib/pkgconfig"
-	],
-	"modules": [
-		{
-			"name": "gdk-pixbuf",
-			"buildsystem": "meson",
-			"config-opts": [
-				"-Dpng=enabled",
-				"-Dtiff=enabled",
-				"-Djpeg=enabled",
-				"-Dgif=enabled",
-				"-Dglycin=disabled",
-				"-Dintrospection=enabled",
-				"-Dman=false",
-				"-Dtests=false",
-				"-Dinstalled_tests=false",
-				"-Dthumbnailer=disabled"
-			],
-			"sources": [
-				{
-					"type": "archive",
-					"url": "https://download.gnome.org/sources/gdk-pixbuf/2.44/gdk-pixbuf-2.44.4.tar.xz",
-					"sha256": "93a1aac3f1427ae73457397582a2c38d049638a801788ccbd5f48ca607bdbd17",
-					"x-checker-data": {
-						"type": "gnome",
-						"name": "gdk-pixbuf",
-						"version-scheme": "odd-minor-is-unstable",
-						"stable-only": true
-					}
-				}
-			]
-		},
-		{
-			"name": "librsvg",
-			"buildsystem": "meson",
-			"config-opts": [
-				"-Drsvg-convert=disabled",
-				"-Dvala=disabled",
-				"-Ddocs=disabled",
-				"-Dtests=false",
-				"-Dpixbuf-loader=enabled",
-				"-Dintrospection=enabled"
-			],
-			"build-options": {
-				"append-path": "/usr/lib/sdk/rust-stable/bin",
-				"env": {
-					"CARGO_HOME": "/run/build/librsvg/cargo"
-				}
-			},
-			"sources": [
-				"librsvg-cargo-sources.json",
-				{
-					"type": "archive",
-					"url": "https://download.gnome.org/sources/librsvg/2.61/librsvg-2.61.3.tar.xz",
-					"sha256": "a56d2c80d744ad2f2718f85df466fe71d24ff1f9bc3e5ef588bde4d7e87815f2",
-					"x-checker-data": {
-						"type": "gnome",
-						"name": "librsvg",
-						"stable-only": true
-					}
-				}
-			],
-			"cleanup": [
-				"/bin"
-			]
-		},
-		{
-			"name": "update-loader-cache",
-			"buildsystem": "simple",
-			"build-commands": [
-				"mkdir -p /app/lib/gdk-pixbuf-2.0/2.10.0/loaders",
-				"for f in /usr/lib/${FLATPAK_ARCH}-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders/*.so; do ln -sf \"$f\" \"/app/lib/gdk-pixbuf-2.0/2.10.0/loaders/$(basename \"$f\")\"; done",
-				"gdk-pixbuf-query-loaders > /app/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache"
-			]
-		},
-		{
-			"name": "drawing",
-			"buildsystem": "meson",
-			"sources": [
-				{
-					"type": "git",
-					"tag": "1.0.2",
-					"commit": "06524e4503139f3013cdffc166f89ab3c1c21b9b",
-					"url": "https://github.com/maoschanz/drawing",
-					"x-checker-data": {
-						"type": "git",
-						"tag-pattern": "^([\\d.]+)$"
-					}
-				},
-				{
-					"type": "patch",
-					"path": "fix-metadata.patch"
-				}
-			]
-		}
-	]
+    "app-id": "com.github.maoschanz.drawing",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "49",
+    "sdk": "org.gnome.Sdk",
+    "command": "drawing",
+    "sdk-extensions": [
+        "org.freedesktop.Sdk.Extension.rust-stable"
+    ],
+    "finish-args": [
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--metadata=X-DConf=migrate-path=/com/github/maoschanz/drawing/"
+    ],
+    "cleanup": [
+        "/bin/gdk-pixbuf-*",
+        "/include",
+        "/share/doc",
+        "/share/man",
+        "/share/thumbnailers",
+        "/lib/pkgconfig"
+    ],
+    "modules": [
+        {
+            "name": "gdk-pixbuf",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dpng=enabled",
+                "-Dtiff=enabled",
+                "-Djpeg=enabled",
+                "-Dgif=enabled",
+                "-Dglycin=disabled",
+                "-Dintrospection=enabled",
+                "-Dman=false",
+                "-Dtests=false",
+                "-Dinstalled_tests=false",
+                "-Dthumbnailer=disabled"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gdk-pixbuf/2.44/gdk-pixbuf-2.44.4.tar.xz",
+                    "sha256": "93a1aac3f1427ae73457397582a2c38d049638a801788ccbd5f48ca607bdbd17",
+                    "x-checker-data": {
+                        "type": "gnome",
+                        "name": "gdk-pixbuf",
+                        "version-scheme": "odd-minor-is-unstable",
+                        "stable-only": true
+                    }
+                }
+            ]
+        },
+        {
+            "name": "librsvg",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Drsvg-convert=disabled",
+                "-Dvala=disabled",
+                "-Ddocs=disabled",
+                "-Dtests=false",
+                "-Dpixbuf-loader=enabled",
+                "-Dintrospection=enabled"
+            ],
+            "build-options": {
+                "append-path": "/usr/lib/sdk/rust-stable/bin",
+                "env": {
+                    "CARGO_HOME": "/run/build/librsvg/cargo"
+                }
+            },
+            "sources": [
+                "librsvg-cargo-sources.json",
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/librsvg/2.61/librsvg-2.61.3.tar.xz",
+                    "sha256": "a56d2c80d744ad2f2718f85df466fe71d24ff1f9bc3e5ef588bde4d7e87815f2",
+                    "x-checker-data": {
+                        "type": "gnome",
+                        "name": "librsvg",
+                        "stable-only": true
+                    }
+                }
+            ],
+            "cleanup": [
+                "/bin"
+            ]
+        },
+        {
+            "name": "update-loader-cache",
+            "buildsystem": "simple",
+            "build-commands": [
+                "mkdir -p /app/lib/gdk-pixbuf-2.0/2.10.0/loaders",
+                "for f in /usr/lib/${FLATPAK_ARCH}-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders/*.so; do ln -sf \"$f\" \"/app/lib/gdk-pixbuf-2.0/2.10.0/loaders/$(basename \"$f\")\"; done",
+                "gdk-pixbuf-query-loaders > /app/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache"
+            ]
+        },
+        {
+            "name": "drawing",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "git",
+                    "tag": "1.0.2",
+                    "commit": "06524e4503139f3013cdffc166f89ab3c1c21b9b",
+                    "url": "https://github.com/maoschanz/drawing",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^([\\d.]+)$"
+                    }
+                },
+                {
+                    "type": "patch",
+                    "path": "fix-metadata.patch"
+                }
+            ]
+        }
+    ]
 }
