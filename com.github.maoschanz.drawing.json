@@ -72,8 +72,8 @@
                 "librsvg-cargo-sources.json",
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/librsvg/2.61/librsvg-2.61.3.tar.xz",
-                    "sha256": "a56d2c80d744ad2f2718f85df466fe71d24ff1f9bc3e5ef588bde4d7e87815f2",
+                    "url": "https://download.gnome.org/sources/librsvg/2.61/librsvg-2.61.90.tar.xz",
+                    "sha256": "8991685ab71a8e59ce597553946034a9282a2713744e8b94877cb0e757b42b76",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "librsvg",
