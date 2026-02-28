@@ -40,8 +40,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gdk-pixbuf/2.44/gdk-pixbuf-2.44.4.tar.xz",
-                    "sha256": "93a1aac3f1427ae73457397582a2c38d049638a801788ccbd5f48ca607bdbd17",
+                    "url": "https://download.gnome.org/sources/gdk-pixbuf/2.44/gdk-pixbuf-2.44.5.tar.xz",
+                    "sha256": "69b93e09139b80c0ee661503d60deb5a5874a31772b5184b9cd5462a4100ab68",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gdk-pixbuf",
@@ -72,8 +72,8 @@
                 "librsvg-cargo-sources.json",
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/librsvg/2.61/librsvg-2.61.3.tar.xz",
-                    "sha256": "a56d2c80d744ad2f2718f85df466fe71d24ff1f9bc3e5ef588bde4d7e87815f2",
+                    "url": "https://download.gnome.org/sources/librsvg/2.62/librsvg-2.62.0.tar.xz",
+                    "sha256": "4278ddc1195ab82f4fd834ac1f5aa75ac1685f3cc5484bb0eaebe03a790b8d82",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "librsvg",
